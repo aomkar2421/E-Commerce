@@ -6,7 +6,7 @@ import { mainCaroselData } from "./MainCaroselData";
 const MainCrosel = () => {
   const items = mainCaroselData.map((item) => (
     <img
-      className="cursor-pointer h-full w-full"
+      className="cursor-pointer h-full w-full -z-10"
       role="presentation"
       src={item.image}
       alt=""
@@ -21,6 +21,7 @@ const MainCrosel = () => {
       autoPlay
       autoPlayInterval={2000}
       infinite
+      disableDotsControls
     />
     </div>
   );
