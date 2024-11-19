@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -19,11 +19,9 @@ function classNames(...classes) {
 export default function Navigation() {
   const [open, setOpen] = useState(false);
  
-  const [openAuthModal, setOpenAuthModal] = useState(false);
+  const [setOpenAuthModal] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
-  const jwt = localStorage.getItem("jwt");
-
 
 
   const handleUserClick = (event) => {
@@ -35,10 +33,6 @@ export default function Navigation() {
 
   const handleOpen = () => {
     setOpenAuthModal(true);
-  };
-  const handleClose = () => {
-    setOpenAuthModal(false);
-
   };
 
   const handleCategoryClick = (category, section, item, close) => {
@@ -396,15 +390,7 @@ export default function Navigation() {
                       >
                         R
                       </Avatar>
-                      {/* <Button
-                        id="basic-button"
-                        aria-controls={open ? "basic-menu" : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? "true" : undefined}
-                        onClick={handleUserClick}
-                      >
-                        Dashboard
-                      </Button> */}
+                      
                       <Menu
                         id="basic-menu"
                         anchorEl={anchorEl}

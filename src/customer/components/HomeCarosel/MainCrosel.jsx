@@ -16,12 +16,12 @@ const MainCrosel = () => {
   return (
     <div>
         <AliceCarousel
-      items={items}
-      disableButtonsControls
-      autoPlay
-      autoPlayInterval={2000}
-      infinite
-      disableDotsControls
+        items={items}
+        disableButtonsControls
+        autoPlay
+        autoPlayInterval={2000}
+        infinite
+        disableDotsControls
     />
     </div>
   );
